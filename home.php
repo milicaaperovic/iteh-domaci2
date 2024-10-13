@@ -38,12 +38,13 @@
                                 <th>Predmet</th>
                                 <th>Katedra</th>
                                 <th>Sala</th>
-                                <th>Datum </th>
+                                <th>Datum kolokvijuma</th>
                                 <th>Selektuj</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php while ($red = $result->fetch_array()) { ?>
+                        <?php
+                            while ($red = $result->fetch_array()) { ?>
                                 <tr>
                                     <td><?php echo $red["predmet"] ?></td>
                                     <td><?php echo $red["katedra"] ?></td>
@@ -56,13 +57,14 @@
                                         </label>
                                     </td>
                                 </tr>
-                            <?php } ?>
+                            <?php  ?>
                             ?>
                             <tr>
                                 <td colspan="5" class="text-center">Nema unetih kolokvijuma</td>
                             </tr>
                         </tbody>
                     </table>
+                            
 
                     <!-- Dugmad za akcije na dnu -->
                     <div class="row">
@@ -174,3 +176,4 @@
 </body>
 
 </html>
+    
